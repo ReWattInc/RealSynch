@@ -61,7 +61,7 @@ class ForgotPage extends React.Component {
                 <div className="alert alert-success">
                     If an account matched that address, an email will be sent with instructions.
                 </div>
-                <Link to="/login" className="btn btn-link">Back to login</Link>
+
             </div>);
         }
 
@@ -78,7 +78,7 @@ class ForgotPage extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.email = c)}
                     name="email"
-                    label="What's your email?"
+                    placeholder="What's your email?"
                     hasError={this.state.hasError.email}
                     help={this.state.help.email}
                     disabled={this.state.loading}
@@ -86,33 +86,44 @@ class ForgotPage extends React.Component {
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
-                        inputClasses={{ 'btn-primary': true }}
+                        inputClasses={{ 'btn-primary full-width mt20': true }}
                         disabled={this.state.loading}>
 
                         Send reset
-                        <Spinner space="left" show={this.state.loading} />
                     </Button>
-                    <Link to="/login" className="btn btn-link">Back to login</Link>
                 </ControlGroup>
             </fieldset>;
         }
 
         return (
-            <section className="container">
+            <section>
                 <Helmet>
                     <title>Forgot password</title>
                 </Helmet>
-                <div className="container">
-                    <h1 className="page-header">Forgot your password?</h1>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <form onSubmit={this.handleSubmit.bind(this)}>
-                                {alerts}
-                                {formElements}
-                            </form>
+                <div className="row wrapper border-bottom white-bg page-heading">
+                    <div className="container">
+                        <div className="col-lg-10">
+                            <h2>Forgot password</h2>
+                        </div>
+                        <div className="col-lg-2">
                         </div>
                     </div>
                 </div>
+                <div className="wrapper wrapper-content  animated fadeInRight">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-lg-offset-4">
+                                <form onSubmit={this.handleSubmit.bind(this)}>
+                                    {alerts}
+                                    {formElements}
+                                </form>
+                        
+                                <Link className="btn btn-w-m btn-default btn-block" to="/login">Back to login</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         );
     }

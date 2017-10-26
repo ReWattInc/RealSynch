@@ -23,6 +23,7 @@ const AppUniversal = function () {
 
     return (
         <div>
+        <div className="page-holder">
             <Route component={Navbar} />
             <Switch>
                 <Route path="/" exact component={Home} />
@@ -38,7 +39,9 @@ const AppUniversal = function () {
 
                 <Route component={NotFound} />
             </Switch>
-            <Footer />
+            
+        </div>
+        <Footer />
         </div>
     );
 };

@@ -1,7 +1,7 @@
 {
-  "name": "aqua",
+  "name": "RealSynchv2",
   "version": "7.0.2",
-  "description": "A website and user system for Node.js",
+  "description": "RealSynch",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -11,8 +11,8 @@
     "test-server": "lab -v -t 99 -S -T ./test/lab/transform $TEST_TARGET ./test/lab/server-after.js",
     "postinstall": "gulp build"
   },
-  "author": "Reza Akhavan <jedireza@gmail.com> (http://reza.akhavan.me/)",
-  "license": "MIT",
+  "author": "Karl Xavier",
+  "license": "GG Tech",
   "engines": {
     "node": ">=8.1.4"
   },
@@ -65,6 +65,7 @@
     "gulp": "3.x.x",
     "gulp-concat": "2.x.x",
     "gulp-less": "3.x.x",
+    "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "2.x.x",
     "gulp-rename": "1.x.x",
     "gulp-sourcemaps": "2.x.x",

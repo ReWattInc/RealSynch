@@ -11,20 +11,28 @@ class SignupPage extends React.Component {
     render() {
 
         return (
-            <section className="section-home container">
+            <section>
                 <Helmet>
                     <title>Sign up</title>
                 </Helmet>
-                <div className="row">
-                    <div className="col-sm-6">
-                        <Form />
+                <div className="row wrapper border-bottom white-bg page-heading">
+                    <div className="container">
+                        <div className="col-lg-10">
+                            <h2>Register New Account</h2>
+                            
+                        </div>
+                        <div className="col-lg-2">
+
+                        </div>
                     </div>
-                    <div className="col-sm-6 text-center">
-                        <h1 className="page-header">Campy benefits</h1>
-                        <p className="lead">
-                            Really, you will love it inside. It’s super great!
-                        </p>
-                        <i className="fa fa-thumbs-o-up bamf"></i>
+                </div>
+                <div className="wrapper wrapper-content  animated fadeInRight">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-lg-offset-4">
+                                <Form />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

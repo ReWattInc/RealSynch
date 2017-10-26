@@ -75,12 +75,11 @@ class PasswordForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <fieldset>
-                    <legend>Password</legend>
                     {alerts}
                     <TextControl
                         name="password"
                         type="password"
-                        label="New password"
+                        placeholder="New password"
                         value={this.state.password}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.password}
@@ -90,7 +89,7 @@ class PasswordForm extends React.Component {
                     <TextControl
                         name="passwordConfirm"
                         type="password"
-                        label="Confirm new password"
+                        placeholder="Confirm new password"
                         value={this.state.passwordConfirm}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.passwordConfirm}
@@ -100,14 +99,10 @@ class PasswordForm extends React.Component {
                     <ControlGroup hideLabel={true} hideHelp={true}>
                         <Button
                             type="submit"
-                            inputClasses={{ 'btn-primary': true }}
+                            inputClasses={{ 'btn-primary mt20': true }}
                             disabled={this.props.loading}>
 
                             Set password
-                            <Spinner
-                                space="left"
-                                show={this.props.loading}
-                            />
                         </Button>
                     </ControlGroup>
                 </fieldset>

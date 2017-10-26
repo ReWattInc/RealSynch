@@ -74,7 +74,7 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.name = c)}
                     name="name"
-                    label="Name"
+                    placeholder="Name"
                     hasError={this.state.hasError.name}
                     help={this.state.help.name}
                     disabled={this.state.loading}
@@ -82,7 +82,7 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.email = c)}
                     name="email"
-                    label="Email"
+                    placeholder="Email"
                     hasError={this.state.hasError.email}
                     help={this.state.help.email}
                     disabled={this.state.loading}
@@ -90,7 +90,7 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.username = c)}
                     name="username"
-                    label="Username"
+                    placeholder="Username"
                     hasError={this.state.hasError.username}
                     help={this.state.help.username}
                     disabled={this.state.loading}
@@ -98,7 +98,7 @@ class Form extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.password = c)}
                     name="password"
-                    label="Password"
+                    placeholder="Password"
                     type="password"
                     hasError={this.state.hasError.password}
                     help={this.state.help.password}
@@ -107,11 +107,10 @@ class Form extends React.Component {
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
-                        inputClasses={{ 'btn-success': true }}
+                        inputClasses={{ 'btn btn-primary mt20 full-width': true }}
                         disabled={this.state.loading}>
 
-                        Create my account
-                        <Spinner space="left" show={this.state.loading} />
+                        Signup
                     </Button>
                 </ControlGroup>
             </fieldset>;
@@ -119,7 +118,6 @@ class Form extends React.Component {
 
         return (
             <section>
-                <h1 className="page-header">Sign up</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     {alert}
                     {formElements}

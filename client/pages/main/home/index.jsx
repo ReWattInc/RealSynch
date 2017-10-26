@@ -12,72 +12,151 @@ class HomePage extends React.Component {
     render() {
 
         return (
-            <section className="section-home container">
-                <Helmet>
-                    <title>Aqua</title>
-                </Helmet>
-                <div className="jumbotron">
-                    <h1>Success</h1>
-                    <p className="lead">Your website and user system is ready.</p>
-                </div>
-                <div className="row">
-                    <div className="col-sm-4">
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <h3 className="panel-title">About us</h3>
+            <div className="landing-page">
+                <div id="inSlider" className="carousel carousel-fade">
+                    <div className="carousel-inner">
+                        <div className="item active">
+                            <div className="container">
+                                <div className="carousel-caption blank">
+                                    <h1>Connecting the Real Estate Industry</h1>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                    <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                                </div>
                             </div>
-                            <div className="panel-body">
-                                <p>
-                                    Bicycle rights jean shorts la croix
-                                    vexillologist hell of kitsch. Photo booth
-                                    craft beer fixie raw denim hot chicken.
-                                    Pickled adaptogen sartorial brooklyn tilde
-                                    bay area.
-                                </p>
-                                <Link to="/about" className="btn btn-info btn-block">
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <h3 className="panel-title">Sign up</h3>
-                            </div>
-                            <div className="panel-body">
-                                <p>
-                                    Health goth skateboard tousled umami, tofu
-                                    squid organic freegan +1 keytar brunch
-                                    post-ironic. Copper mug selfies tattooed
-                                    chicharrones short ribs yolo cardigan.
-                                </p>
-                                <Link to="/signup" className="btn btn-success btn-block">
-                                    Learn more
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="panel panel-default">
-                            <div className="panel-heading">
-                                <h3 className="panel-title">Contact us</h3>
-                            </div>
-                            <div className="panel-body">
-                                <p>
-                                    Roof party readymade tote bag hot chicken
-                                    blog. Fam readymade raclette hella quinoa.
-                                    Cred pour-over yuccie williamsburg shabby
-                                    chic ramps chartreuse messenger bag.
-                                </p>
-                                <Link to="/contact" className="btn btn-warning btn-block">
-                                    Learn more
-                                </Link>
-                            </div>
+                            <div className="header-back one"></div>
+                            <div className="color-correction"></div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <section className="features">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 text-center">
+                                <div className="navy-line"></div>
+                                <h1>More and more extra great feautres</h1>
+                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="pricing">
+                    <div className="container">
+                        <div className="row m-b-lg">
+                            <div className="col-lg-12 text-center">
+                                <div className="navy-line"></div>
+                                <h1>App Pricing</h1>
+                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-4 wow zoomIn animated">
+                                <ul className="pricing-plan list-unstyled">
+                                    <li className="pricing-title">
+                                        Basic
+                                    </li>
+                                    <li className="pricing-desc">
+                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
+                                    </li>
+                                    <li className="pricing-price">
+                                        <span>$16</span> / month
+                                    </li>
+                                    <li>
+                                        Dashboards
+                                    </li>
+                                    <li>
+                                        Projects view
+                                    </li>
+                                    <li>
+                                        Contacts
+                                    </li>
+                                    <li>
+                                        Calendar
+                                    </li>
+                                    <li>
+                                        AngularJs
+                                    </li>
+                                    <li>
+                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="col-lg-4 wow zoomIn animated">
+                                <ul className="pricing-plan list-unstyled selected">
+                                    <li className="pricing-title">
+                                        Standard
+                                    </li>
+                                    <li className="pricing-desc">
+                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
+                                    </li>
+                                    <li className="pricing-price">
+                                        <span>$22</span> / month
+                                    </li>
+                                    <li>
+                                        Dashboards
+                                    </li>
+                                    <li>
+                                        Projects view
+                                    </li>
+                                    <li>
+                                        Contacts
+                                    </li>
+                                    <li>
+                                        Calendar
+                                    </li>
+                                    <li>
+                                        AngularJs
+                                    </li>
+                                    <li>
+                                        <strong>Support platform</strong>
+                                    </li>
+                                    <li className="plan-action">
+                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="col-lg-4 wow zoomIn animated">
+                                <ul className="pricing-plan list-unstyled">
+                                    <li className="pricing-title">
+                                        Premium
+                                    </li>
+                                    <li className="pricing-desc">
+                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
+                                    </li>
+                                    <li className="pricing-price">
+                                        <span>$160</span> / month
+                                    </li>
+                                    <li>
+                                        Dashboards
+                                    </li>
+                                    <li>
+                                        Projects view
+                                    </li>
+                                    <li>
+                                        Contacts
+                                    </li>
+                                    <li>
+                                        Calendar
+                                    </li>
+                                    <li>
+                                        AngularJs
+                                    </li>
+                                    <li>
+                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="row m-t-lg">
+                            <div className="col-lg-8 col-lg-offset-2 text-center m-t-lg">
+                                <p>*Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                                    <span className="navy">Various versions</span>  have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         );
     }
 }

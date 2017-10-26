@@ -10,7 +10,7 @@ class AdminPage extends React.Component {
                 <head>
                     <title>Admin</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <link rel="stylesheet" href="/public/core.min.css" />
+                    <link rel="stylesheet" href="/public/css/core.min.css" />
                     <link rel="stylesheet" href="/public/pages/admin.min.css" />
                     <link rel="shortcut icon" href="/public/media/favicon.ico" />
                 </head>
@@ -18,6 +18,8 @@ class AdminPage extends React.Component {
                     <div id="app-mount"></div>
                     <script src="/public/core.min.js"></script>
                     <script src="/public/pages/admin.min.js"></script>
+                    <script src="/public/js/jquery.js"></script>
+                    <script src="/public/js/page-js.js"></script>
                 </body>
             </html>
         );

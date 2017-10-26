@@ -12,20 +12,21 @@ const criteria = {
 
 const config = {
     $meta: 'This file configures the plot device.',
-    projectName: 'Aqua',
+    projectName: 'Realsynch',
     port: {
         web: {
             $filter: 'env',
             test: 9000,
             production: process.env.PORT,
-            $default: 8000
+            $default: process.env.PORT || 3000
         }
     },
     baseUrl: {
         $filter: 'env',
         $meta: 'values should not end in "/"',
-        production: 'https://getaqua.herokuapp.com',
-        $default: 'http://127.0.0.1:8000'
+        production: 'https://realsynch-api.herokuapp.com',
+        // $default: 'http://127.0.0.1:8000'
+        $default: 'https://realsynch-api.herokuapp.com/'
     },
     authAttempts: {
         forIp: 50,
@@ -42,7 +43,8 @@ const config = {
                 $filter: 'env',
                 production: process.env.MONGODB_URI,
                 test: 'mongodb://localhost:27017/aqua-test',
-                $default: 'mongodb://localhost:27017/aqua'
+                // $default: 'mongodb://localhost:27017/aqua'
+                $default: 'mongodb://realsynch:password123@ds231205.mlab.com:31205/heroku_7pmn8c2r'
             }
         },
         autoIndex: true
@@ -52,8 +54,8 @@ const config = {
         port: 465,
         secure: true,
         auth: {
-            user: 'jedireza@gmail.com',
-            pass: process.env.SMTP_PASSWORD
+            user: 'noreply.realsynch.api@gmail.com',
+            pass: 'asdfasf23424!@#A#'
         }
     },
     system: {

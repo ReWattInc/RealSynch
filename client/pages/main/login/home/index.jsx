@@ -78,7 +78,7 @@ class LoginPage extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.username = c)}
                     name="username"
-                    label="Username or email"
+                    placeholder="Email"
                     hasError={this.state.hasError.username}
                     help={this.state.help.username}
                     disabled={this.state.loading}
@@ -86,8 +86,8 @@ class LoginPage extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.password = c)}
                     name="password"
-                    label="Password"
                     type="password"
+                    placeholder="Password"
                     hasError={this.state.hasError.password}
                     help={this.state.help.password}
                     disabled={this.state.loading}
@@ -95,33 +95,48 @@ class LoginPage extends React.Component {
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
-                        inputClasses={{ 'btn-primary': true }}
+                        inputClasses={{ 'btn-primary full-width mt20': true }}
                         disabled={this.state.loading}>
 
                         Sign in
-                        <Spinner space="left" show={this.state.loading} />
                     </Button>
-                    <Link to="/login/forgot" className="btn btn-link">Forgot your password?</Link>
+                    
                 </ControlGroup>
+                
             </fieldset>;
         }
 
         return (
-            <section className="container">
+            <section>
                 <Helmet>
                     <title>Sign in</title>
                 </Helmet>
-                <div className="container">
-                    <h1 className="page-header">Sign in</h1>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <form onSubmit={this.handleSubmit.bind(this)}>
-                                {alerts}
-                                {formElements}
-                            </form>
+                <div className="row wrapper border-bottom white-bg page-heading">
+                    <div className="container">
+                        <div className="col-lg-10">
+                            <h2>Sign In</h2>
+                        </div>
+                        <div className="col-lg-2">
                         </div>
                     </div>
                 </div>
+                <div className="wrapper wrapper-content text-center animated fadeInRight">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-lg-offset-4">
+                                <form onSubmit={this.handleSubmit.bind(this)}>
+                                    {alerts}
+                                    {formElements}
+                                </form>
+                        
+                                <Link className="mb10" to="/login/forgot"><small>Forgot your password?</small></Link>
+                                <p className="text-muted text-center"><small>Do not have an account?</small></p>
+                                <Link className="btn btn-sm btn-white btn-block" to="/signup">Register New Account</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         );
     }

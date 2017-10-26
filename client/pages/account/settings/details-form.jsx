@@ -84,11 +84,10 @@ class DetailsForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <fieldset>
-                    <legend>Contact info</legend>
                     {alerts}
                     <TextControl
                         name="name.first"
-                        label="First name"
+                        placeholder="First name"
                         value={this.state.name.first}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError['name.first']}
@@ -97,7 +96,7 @@ class DetailsForm extends React.Component {
                     />
                     <TextControl
                         name="name.middle"
-                        label="Middle name"
+                        placeholder="Middle name"
                         value={this.state.name.middle}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError['name.middle']}
@@ -106,7 +105,7 @@ class DetailsForm extends React.Component {
                     />
                     <TextControl
                         name="name.last"
-                        label="Last name"
+                        placeholder="Last name"
                         value={this.state.name.last}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError['name.last']}
@@ -116,14 +115,10 @@ class DetailsForm extends React.Component {
                     <ControlGroup hideLabel={true} hideHelp={true}>
                         <Button
                             type="submit"
-                            inputClasses={{ 'btn-primary': true }}
+                            inputClasses={{ 'btn-primary mt20': true }}
                             disabled={this.props.loading}>
 
                             Update contact info
-                            <Spinner
-                                space="left"
-                                show={this.props.loading}
-                            />
                         </Button>
                     </ControlGroup>
                 </fieldset>

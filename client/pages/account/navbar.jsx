@@ -46,39 +46,66 @@ class Navbar extends React.Component {
         });
 
         return (
-            <div className="navbar navbar-default navbar-fixed-top">
+
+            <nav className="navbar navbar-static-top">
                 <div className="container">
                     <div className="navbar-header">
-                        <Link className="navbar-brand" to="/account">
-                            <img className="navbar-logo" src="/public/media/logo-square.png" />
-                            <span className="navbar-brand-label">Aqua</span>
+                        <Link to="/account" className="navbar-minimalize minimalize-styl-2">
+                            <span className="navbar-brand-label">
+                                <span className="brand-real">Real</span>
+                                <span className="brand-synch">Synch</span>
+                            </span>
                         </Link>
-                        <button
-                            className="navbar-toggle collapsed"
-                            onClick={this.toggleMenu.bind(this)}>
-
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                        </button>
                     </div>
-                    <div className={navBarCollapse}>
-                        <ul className="nav navbar-nav">
-                            <li className={this.classForPath('/account')}>
-                                <Link to="/account">My account</Link>
-                            </li>
-                            <li className={this.classForPath('/account/settings')}>
-                                <Link to="/account/settings">Settings</Link>
-                            </li>
-                        </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/login/logout">Sign out</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul className="nav navbar-top-links navbar-right">
+                        <li className="dropdown">
+                            <a className="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i className="fa fa-bell"></i>  <span className="label label-warning">8</span>
+                            </a>
+                            <ul className="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i className="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span className="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                    <ul className="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i className="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span className="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li className="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i className="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span className="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Link to="/account/settings">
+                                <i className="fa fa-cog"></i> Settings
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <a href="/login/logout">
+                                <i className="fa fa-sign-out"></i> Sign out
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </nav>
+
         );
     }
 }

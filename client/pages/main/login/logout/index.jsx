@@ -52,21 +52,33 @@ class LogoutPage extends React.Component {
         }
 
         return (
-            <section className="container">
+            <section>
                 <Helmet>
                     <title>Sign out</title>
                 </Helmet>
-                <div className="container">
-                    <h1 className="page-header">Sign out</h1>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            {alerts}
-                            <Link to="/login" className="btn btn-link">
-                                Sign in again
-                            </Link>
+                <div className="row wrapper border-bottom white-bg page-heading">
+                    <div className="container">
+                        <div className="col-lg-10">
+                            <h2>Successfully log out</h2>
+                        </div>
+                        <div className="col-lg-2">
                         </div>
                     </div>
                 </div>
+
+                <div className="wrapper wrapper-content text-center animated fadeInRight">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-lg-offset-4">
+                                <div>
+                                    {alerts}
+                                    <Link className="btn btn-primary full-width mt20 mb10" to="/login"><small>Back to login</small></Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         );
     }

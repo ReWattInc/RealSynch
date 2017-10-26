@@ -6,6 +6,6 @@ need this key to do it.
 __Key:__  
 {{baseHref}}/{{email}}/{{key}}
 
-Love,
+Thanks,
 
-The Plot Device
+RealSynch

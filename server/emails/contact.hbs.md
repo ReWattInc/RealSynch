@@ -6,6 +6,6 @@
 | Email:   | {{email}}   |
 | Message: | {{message}} |
 
-Love,
+Thanks,
 
-The Plot Device
+RealSynch

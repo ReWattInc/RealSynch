@@ -84,11 +84,11 @@ class UserForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <fieldset>
-                    <legend>Identity</legend>
+               
                     {alerts}
                     <TextControl
                         name="username"
-                        label="Username"
+                        placeholder="Username"
                         value={this.state.username}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.username}
@@ -97,7 +97,7 @@ class UserForm extends React.Component {
                     />
                     <TextControl
                         name="email"
-                        label="Email"
+                        placeholder="Email"
                         value={this.state.email}
                         onChange={LinkState.bind(this)}
                         hasError={this.props.hasError.email}
@@ -107,14 +107,10 @@ class UserForm extends React.Component {
                     <ControlGroup hideLabel={true} hideHelp={true}>
                         <Button
                             type="submit"
-                            inputClasses={{ 'btn-primary': true }}
+                            inputClasses={{ 'btn-primary mt20': true }}
                             disabled={this.props.loading}>
 
                             Update identity
-                            <Spinner
-                                space="left"
-                                show={this.props.loading}
-                            />
                         </Button>
                     </ControlGroup>
                 </fieldset>

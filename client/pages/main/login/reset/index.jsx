@@ -67,7 +67,6 @@ class ResetPage extends React.Component {
                 <div className="alert alert-success">
                     Your password has been reset. Please login to confirm.
                 </div>
-                <Link to="/login" className="btn btn-link">Back to login</Link>
             </div>);
         }
 
@@ -84,7 +83,7 @@ class ResetPage extends React.Component {
                 <TextControl
                     ref={(c) => (this.input.password = c)}
                     name="password"
-                    label="New password"
+                    placeholder="New password"
                     type="password"
                     hasError={this.state.hasError.password}
                     help={this.state.help.password}
@@ -92,7 +91,7 @@ class ResetPage extends React.Component {
                 />
                 <TextControl
                     name="_key"
-                    label="Key"
+                    placeholder="Key"
                     hasError={this.state.hasError.key}
                     value={this.props.match.params.key}
                     help={this.state.help.key}
@@ -100,7 +99,7 @@ class ResetPage extends React.Component {
                 />
                 <TextControl
                     name="_email"
-                    label="Email"
+                    placeholder="Email"
                     hasError={this.state.hasError.email}
                     value={this.props.match.params.email}
                     help={this.state.help.email}
@@ -109,33 +108,44 @@ class ResetPage extends React.Component {
                 <ControlGroup hideLabel={true} hideHelp={true}>
                     <Button
                         type="submit"
-                        inputClasses={{ 'btn-primary': true }}
+                        inputClasses={{ 'btn-primary full-width mt20': true }}
                         disabled={this.state.loading}>
 
                         Set password
-                        <Spinner space="left" show={this.state.loading} />
                     </Button>
-                    <Link to="/login" className="btn btn-link">Back to login</Link>
                 </ControlGroup>
             </fieldset>;
         }
 
         return (
-            <section className="container">
+            <section>
                 <Helmet>
                     <title>Reset password</title>
                 </Helmet>
-                <div className="container">
-                    <h1 className="page-header">Reset your password</h1>
-                    <div className="row">
-                        <div className="col-sm-6">
-                            <form onSubmit={this.handleSubmit.bind(this)}>
-                                {alerts}
-                                {formElements}
-                            </form>
+                <div className="row wrapper border-bottom white-bg page-heading">
+                    <div className="container">
+                        <div className="col-lg-10">
+                            <h2>Reset password</h2>
+                        </div>
+                        <div className="col-lg-2">
                         </div>
                     </div>
                 </div>
+                <div className="wrapper wrapper-content  animated fadeInRight">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-4 col-lg-offset-4">
+                                <form onSubmit={this.handleSubmit.bind(this)}>
+                                    {alerts}
+                                    {formElements}
+                                </form>
+                        
+                                <Link className="btn btn-w-m btn-default btn-block" to="/login"><small>Back to login</small></Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         );
     }

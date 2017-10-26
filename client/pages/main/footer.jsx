@@ -12,16 +12,22 @@ class Footer extends React.Component {
         const year = new Date().getFullYear();
 
         return (
-            <div className="footer">
+            <div className="footer pt20 pb20">
                 <div className="container">
-                    <span className="copyright pull-right">
-                        &#169; {year} Acme, Inc.
-                    </span>
-                    <ul className="links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                    </ul>
-                    <div className="clearfix"></div>
+                    <div className="row">
+                        <div className="col-md-12 text-center">
+                            <ul className="list-inline">
+                                <li className="list-inline-item">
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li className="list-inline-item">
+                                    <Link to="/contact">Contact</Link>
+                                </li>
+                            </ul>
+                            <span>&#169; Copyright {year} RealSynch. All Right Reserved.</span>
+                            <div className="clearfix"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
