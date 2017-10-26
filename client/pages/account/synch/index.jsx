@@ -110,7 +110,7 @@ class SynchPage extends React.Component {
                                 <div className={classNames("grid-item synch-box", {"grid-item synch-box remove-synch":this.state.redText})}>
                                     <div className="synch-item">
                                         <a href="#" className="synch-link" onClick={this.addClass}>
-                                            <img src="../public/media/synchs/mojo.jpg"/>
+                                            <img src="../public/images/Mojo.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/firepoint.jpg"/>
+                                            <img src="../public/images/FirePoint.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/propertybase.jpg"/>
+                                            <img src="../public/images/PropertyBase.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/proquest.jpg"/>
+                                            <img src="../public/images/ProQuest.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/rethink.jpg"/>
+                                            <img src="../public/images/REthink.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -150,7 +150,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/salesforce.jpg"/>
+                                            <img src="../public/images/Salesforce.JPG"/>
                                         </a>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ class SynchPage extends React.Component {
                                 <div className="grid-item synch-box">
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
-                                            <img src="../public/media/synchs/voicepad.jpg"/>
+                                            <img src="../public/images/VoicePad.JPG"/>
                                         </a>
                                     </div>
                                 </div>
