@@ -25,10 +25,9 @@ class AccountPage extends React.Component {
                     <script src="/public/pages/account.min.js"></script>
                     <script src="/public/js/jquery.js"></script>
                     <script src="/public/js/bootstrap.min.js"></script>
-                    <script src="/public/js/prism.js"></script>
-                    <script src="/public/js/chosen.jquery.js"></script>
-                    <script src="/public/js/image-select.js"></script>
+                    <script src="/public/js/masonry.js"></script>
                     <script src="/public/js/realsynch.js"></script>
+                    <script src="/public/js/steps.js"></script>
                 </body>
             </html>
         );

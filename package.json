@@ -20,7 +20,7 @@
     "async": "2.x.x",
     "bcrypt": "1.x.x",
     "boom": "5.x.x",
-    "classnames": "2.x.x",
+    "classnames": "^2.2.5",
     "confidence": "3.x.x",
     "crumb": "6.x.x",
     "dotenv": "4.x.x",

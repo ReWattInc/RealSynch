@@ -2,7 +2,7 @@
 const PropTypes = require('prop-types');
 const React = require('react');
 const ReactRouter = require('react-router-dom');
-const ClassNames = require('classnames');
+const classNames = require('classnames');
 const SynchForm = require('./synch-form.jsx');
 const ReactHelmet = require('react-helmet');
 
@@ -26,6 +26,29 @@ class SynchPage extends React.Component {
         document.body.appendChild(script);
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {
+           redText: false,
+           tabs: 0
+        };
+        this.addClass = this.addClass.bind(this);
+        this.removeClass = this.removeClass.bind(this);
+    }
+
+    addClass() {
+        this.setState({
+            redText:true
+        });
+        $('.grid').masonry('reloadItems')
+    }
+
+    removeClass() {
+        this.setState({
+            redText:false
+        });
+    }
+
     render() {
 
         return (
@@ -43,51 +66,103 @@ class SynchPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="wrapper wrapper-content text-center animated fadeInRight">
+                <div className="wrapper wrapper-content animated fadeInRight">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
-                            	<div className="ibox">
-                            		<div className="ibox-title">
-			                            <h5>Source</h5>
-			                        </div>
-			                        <div className="ibox-content">
-			                        	<select name="synchs" className="chosen-select" data-placeholder="Choose a Country...">
-										  	<option data-img-src="/public/media/synchs/Mojo.JPG" value="mojo">Mojo</option>
-										  	<option data-img-src="/public/media/synchs/FirePoint.JPG" value="firepoint">Firepoint</option>
-										  	<option data-img-src="/public/media/synchs/PropertyBase.JPG" value="property_base">Property Base</option>
-										  	<option data-img-src="/public/media/synchs/ProQuest.JPG" value="mojo">ProQuest</option>
-										  	<option data-img-src="/public/media/synchs/REthink.JPG" value="firepoint">ReThink</option>
-										  	<option data-img-src="/public/media/synchs/Salesforce.JPG" value="property_base">Salesforce</option>
-										  	<option data-img-src="/public/media/synchs/VoicePad.JPG" value="property_base">Voice Pad</option>
-										</select>
-			                        </div>
-                            	</div>
-                            </div>
-
-                            <div className="col-lg-6">
-                            	<div className="ibox">
-                            		<div className="ibox-title">
-			                            <h5>Target</h5>
-			                        </div>
-			                        <div className="ibox-content">
-			                        	<select name="synchs" className="chosen-select" data-placeholder="Choose a Country...">
-										  	<option data-img-src="/public/media/synchs/Mojo.JPG" value="mojo">Mojo</option>
-										  	<option data-img-src="/public/media/synchs/FirePoint.JPG" value="firepoint">Firepoint</option>
-										  	<option data-img-src="/public/media/synchs/PropertyBase.JPG" value="property_base">Property Base</option>
-										  	<option data-img-src="/public/media/synchs/ProQuest.JPG" value="mojo">ProQuest</option>
-										  	<option data-img-src="/public/media/synchs/REthink.JPG" value="firepoint">ReThink</option>
-										  	<option data-img-src="/public/media/synchs/Salesforce.JPG" value="property_base">Salesforce</option>
-										  	<option data-img-src="/public/media/synchs/VoicePad.JPG" value="property_base">Voice Pad</option>
-										</select>
-			                        </div>
-                            	</div>
+                            <div className="col-lg-12">
+                                <div className="ibox">
+                                    <div className="ibox-content">
+                                        <div className="steps d-flex flex-wrap flex-sm-nowrap justify-content-between">
+                                            
+                                            <div className={classNames("step", {"step completed":this.state.redText})}>
+                                                <div className="step-icon-wrap">
+                                                    <div className="step-icon"><i className="fa fa-random"></i></div>
+                                                </div>
+                                                <h4 className="step-title">Source</h4>
+                                            </div>
+                                 
+                                            <div className="step">
+                                                <div className="step-icon-wrap">
+                                                    <div className="step-icon"><i className="fa fa-crosshairs"></i></div>
+                                                </div>
+                                                <h4 className="step-title">Target</h4>
+                                            </div>
+                                            <div className="step">
+                                                <div className="step-icon-wrap">
+                                                    <div className="step-icon"><i className="fa fa-key"></i></div>
+                                                </div>
+                                                <h4 className="step-title">Credentials</h4>
+                                            </div>
+                                            <div className="step">
+                                                <div className="step-icon-wrap">
+                                                    <div className="step-icon"><i className="fa fa-check"></i></div>
+                                                </div>
+                                                <h4 className="step-title">Finish</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="row">
-                        	<div className="col-lg-4 col-lg-offset-4">
-                        		<button type="button" className="btn btn-primary btn-block">Save</button>
-                        	</div>
+                        <div className="container synch-group">
+
+                            <div className="grid">
+                                <div className={classNames("grid-item synch-box", {"grid-item synch-box remove-synch":this.state.redText})}>
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link" onClick={this.addClass}>
+                                            <img src="../public/media/synchs/mojo.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/firepoint.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/propertybase.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/proquest.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/rethink.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/salesforce.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/media/synchs/voicepad.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,3 +173,4 @@ class SynchPage extends React.Component {
 
 
 module.exports = SynchPage;
+

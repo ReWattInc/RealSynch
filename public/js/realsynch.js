@@ -1,5 +1,13 @@
-$('.chosen-select').chosen({width: "100%"});
+// $('.chosen-select').chosen({width: "100%"});
 
-// $(".chosen-select").chosenImage({
-//   disable_search_threshold: 10 
+
+// $(window).load(function() {
+
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 20,
+        gutter: 5
+    });
+
 // });
