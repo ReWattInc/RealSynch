@@ -32,32 +32,34 @@ internals.applyRoutes = function (server, next) {
                 payload: {
                     name: Joi.string().required(),
                     email: Joi.string().email().lowercase().required(),
-                    username: Joi.string().token().lowercase().required(),
+                    // username: Joi.string().token().lowercase(),
                     password: Joi.string().required()
                 }
             },
-            pre: [{
-                assign: 'usernameCheck',
-                method: function (request, reply) {
+            pre: [
+            // {
+            //     assign: 'usernameCheck',
+            //     method: function (request, reply) {
 
-                    const conditions = {
-                        username: request.payload.username
-                    };
+            //         const conditions = {
+            //             username: request.payload.username
+            //         };
 
-                    User.findOne(conditions, (err, user) => {
+            //         User.findOne(conditions, (err, user) => {
 
-                        if (err) {
-                            return reply(err);
-                        }
+            //             if (err) {
+            //                 return reply(err);
+            //             }
 
-                        if (user) {
-                            return reply(Boom.conflict('Username already in use.'));
-                        }
+            //             if (user) {
+            //                 return reply(Boom.conflict('Username already in use.'));
+            //             }
 
-                        reply(true);
-                    });
-                }
-            }, {
+            //             reply(true);
+            //         });
+            //     }
+            // }, 
+                {
                 assign: 'emailCheck',
                 method: function (request, reply) {
 
@@ -87,11 +89,12 @@ internals.applyRoutes = function (server, next) {
             Async.auto({
                 user: function (done) {
 
-                    const username = request.payload.username;
+                    // const username = request.payload.username;
                     const password = request.payload.password;
                     const email = request.payload.email;
 
-                    User.create(username, password, email, done);
+                    User.create(password, email, done);
+                    // User.create(username, password, email, done);
                 },
                 account: ['user', function (results, done) {
 
@@ -105,8 +108,10 @@ internals.applyRoutes = function (server, next) {
                     const update = {
                         $set: {
                             user: {
-                                id: results.user._id.toString(),
-                                name: results.user.username
+                                // id: results.user._id.toString(),
+                                // name: results.user.username
+
+                                id: results.user._id.toString()
                             }
                         }
                     };
@@ -160,12 +165,12 @@ internals.applyRoutes = function (server, next) {
                 }
 
                 const user = results.linkAccount;
-                const credentials = user.username + ':' + results.session.key;
+                const credentials = user.email + ':' + results.session.key;
                 const authHeader = 'Basic ' + new Buffer(credentials).toString('base64');
                 const result = {
                     user: {
                         _id: user._id,
-                        username: user.username,
+                        // username: user.username,
                         email: user.email,
                         roles: user.roles
                     },

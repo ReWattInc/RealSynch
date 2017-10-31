@@ -28,134 +28,204 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <section className="features">
+                <section className="bg-gray-light pb-0">
                     <div className="container">
-                        <div className="row">
+                        <div className="row justify-content-center pb-4 pb-lg-5">
                             <div className="col-lg-12 text-center">
-                                <div className="navy-line"></div>
-                                <h1>More and more extra great feautres</h1>
-                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+                                <h1>Integration</h1>
+                                <p className="mt-4 text-xs-large text-extra-large">
+                                <i>It’s not just connecting apps and sharing data – It’s about accelerating and delivering business value and innovation.</i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container-fluid mt50">
+                        <div className="row">
+                            <div className="col-sm-6 col-lg-4 px-0">
+                                <a className="page-scroll" href="#automate">
+                                    <div className="position-relative">
+                                        <img src='../public/media/services-1.png' className="img-fluid" />
+                                        <div className="bg-white position-relative p-5 height97" data-mh="mh-our-services">
+                               
+                                            <span className="triangle-top-left triangle-gray-dark left-0 opacity-2-5 position-absolute top-0"></span>
+                                            
+                              
+                                            <span className="icon bg-base-color text-white rounded-circle">
+                                                <i className="fa fa-gear"></i>
+                                            </span>
+                                            
+                                            <h4>Automate and Streamline processes</h4>
+                                            <span className="bg-base-color mt-3 sep-line-thick"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="col-sm-6 col-lg-4 px-0"> 
+                                <a className="page-scroll" href="#future">
+                                    <div className="position-relative">
+                                        <img src='../public/media/services-2.jpg' className="img-fluid" />
+                                        <div className="bg-white position-relative p-5 height97" data-mh="mh-our-services">
+                          
+                                            <span className="triangle-top-left triangle-gray-dark left-0 opacity-2-5 position-absolute top-0"></span>
+                                            
+                                   
+                                            <span className="icon bg-base-color text-white rounded-circle"><i className="fa fa-line-chart"></i></span>
+                                            
+                                            <h4>Future Proofing Business</h4>
+                                            <span className="bg-base-color mt-3 sep-line-thick"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="col-sm-6 col-lg-4 px-0">
+                                <a className="page-scroll" href="#competitive">
+                                    <div className="position-relative">
+                                        <img src='../public/media/services-3.jpg' className="img-fluid" />
+                                        <div className="bg-white position-relative p-5 height97" data-mh="mh-our-services">
+         
+                                            <span className="triangle-top-left triangle-gray-dark left-0 opacity-2-5 position-absolute top-0"></span>
+                                            
+                                 
+                                            <span className="icon bg-base-color text-white rounded-circle"><i className="fa fa-trophy"></i></span>
+                                            
+                                            <h4>Competitive Edge</h4>
+                                            <span className="bg-base-color mt-3 sep-line-thick"></span>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="pricing">
+                <div className="app-features text-center">
                     <div className="container">
-                        <div className="row m-b-lg">
-                            <div className="col-lg-12 text-center">
-                                <div className="navy-line"></div>
-                                <h1>App Pricing</h1>
-                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-users"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Visibility for Agents and Coordinators who don’t have access to critical applications/data.</p>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-clock-o"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Eliminating manual duplicate data entry (Time and Accuracy).</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-4 wow zoomIn animated">
-                                <ul className="pricing-plan list-unstyled">
-                                    <li className="pricing-title">
-                                        Basic
-                                    </li>
-                                    <li className="pricing-desc">
-                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                                    </li>
-                                    <li className="pricing-price">
-                                        <span>$16</span> / month
-                                    </li>
-                                    <li>
-                                        Dashboards
-                                    </li>
-                                    <li>
-                                        Projects view
-                                    </li>
-                                    <li>
-                                        Contacts
-                                    </li>
-                                    <li>
-                                        Calendar
-                                    </li>
-                                    <li>
-                                        AngularJs
-                                    </li>
-                                    <li>
-                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="col-lg-4 wow zoomIn animated">
-                                <ul className="pricing-plan list-unstyled selected">
-                                    <li className="pricing-title">
-                                        Standard
-                                    </li>
-                                    <li className="pricing-desc">
-                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                                    </li>
-                                    <li className="pricing-price">
-                                        <span>$22</span> / month
-                                    </li>
-                                    <li>
-                                        Dashboards
-                                    </li>
-                                    <li>
-                                        Projects view
-                                    </li>
-                                    <li>
-                                        Contacts
-                                    </li>
-                                    <li>
-                                        Calendar
-                                    </li>
-                                    <li>
-                                        AngularJs
-                                    </li>
-                                    <li>
-                                        <strong>Support platform</strong>
-                                    </li>
-                                    <li className="plan-action">
-                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="col-lg-4 wow zoomIn animated">
-                                <ul className="pricing-plan list-unstyled">
-                                    <li className="pricing-title">
-                                        Premium
-                                    </li>
-                                    <li className="pricing-desc">
-                                        Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.
-                                    </li>
-                                    <li className="pricing-price">
-                                        <span>$160</span> / month
-                                    </li>
-                                    <li>
-                                        Dashboards
-                                    </li>
-                                    <li>
-                                        Projects view
-                                    </li>
-                                    <li>
-                                        Contacts
-                                    </li>
-                                    <li>
-                                        Calendar
-                                    </li>
-                                    <li>
-                                        AngularJs
-                                    </li>
-                                    <li>
-                                        <a className="btn btn-primary btn-xs" href="#">Signup</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div className="col-md-4 padtop8" id="automate">
+                            <i className="fa fa-cogs big-icon top50"></i>
+                            <h2>Automate and Streamline processes</h2>
                         </div>
-                        <div className="row m-t-lg">
-                            <div className="col-lg-8 col-lg-offset-2 text-center m-t-lg">
-                                <p>*Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
-                                    <span className="navy">Various versions</span>  have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-bolt"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Real-time Actions and Reporting on Client Acquisition Cost.</p>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-area-chart"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Getting more insight on KPIs to Forecast a pipeline for the business.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div className="app-features text-center">
+                    <div className="container">
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-comments"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Flexibility to manage change and do more with less.</p>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-code"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Reduction of dependency on brittle “custom coded” connections - developer dependent SPF (“Single point of Failure”).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 padtop8" id="future">
+                            <i className="fa fa-pie-chart big-icon top50"></i>
+                            <h2>Future Proofing Business</h2>
+                        </div>
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-cloud"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Scalability to meet future growth needs.</p>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-server"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Standardize on modern and robust technologies to break down the restrictions of the past.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="app-features text-center top50">
+                    <div className="container">
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-handshake-o"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Being easier to do business with than your competition.</p>
+                                </div>
+                            </div>
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-history"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Reducing and eliminating friction in the sales process throughout customer lifecycle.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 padtop8" id="competitive">
+                            <i className="fa fa-trophy big-icon top50"></i>
+                            <h2>Competitive Edge</h2>
+                        </div>
+                        <div className="col-md-4 features-left">
+                            <div className="col-md-12">
+                                <div className="iconx">
+                                    <i className="fa fa-users"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Enabling all roles to be more efficient and effective (inside Sales, outside Agents, Coordinators, Vendors).</p>
+                                </div>
+                                <div className="iconx">
+                                    <i className="fa fa-cubes"></i>
+                                </div>
+                                <div className="feature-single">
+                                    <p>Interconnect the latest apps to derive key business intelligence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
