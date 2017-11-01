@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aqua
 
 A website and user system starter.
@@ -213,3 +214,7 @@ MIT
 ## Don't forget
 
 What you build with Aqua is more important than Aqua.
+=======
+# RealSynch
+Web
+>>>>>>> a560f66f9662b33027da175ac4d3b09b3810567c
