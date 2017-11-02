@@ -276,7 +276,7 @@ internals.applyRoutes = function (server, next) {
                 reply({ success: true });
             });
         }
-    });
+    }); 
 
 
     next();
