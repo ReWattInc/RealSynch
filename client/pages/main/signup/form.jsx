@@ -7,6 +7,7 @@ const React = require('react');
 const Spinner = require('../../../components/form/spinner.jsx');
 const Store = require('./store');
 const TextControl = require('../../../components/form/text-control.jsx');
+const randomString = require('random-string');
 
 
 class Form extends React.Component {
@@ -44,7 +45,8 @@ class Form extends React.Component {
 
         Actions.sendRequest({
             name: this.input.name.value(),
-            username: this.input.username.value(),
+            // username: this.input.username.value(),
+            username: randomString(),
             password: this.input.password.value(),
             email: this.input.email.value()
         });
@@ -85,6 +87,14 @@ class Form extends React.Component {
                     label="Email"
                     hasError={this.state.hasError.email}
                     help={this.state.help.email}
+                    disabled={this.state.loading}
+                />
+                <TextControl
+                    ref={(c) => (this.input.username = c)}
+                    type="hidden"
+                    name="username"
+                    hasError={this.state.hasError.username}
+                    help={this.state.help.username}
                     disabled={this.state.loading}
                 />
                 <TextControl
