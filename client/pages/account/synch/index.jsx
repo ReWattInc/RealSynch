@@ -95,6 +95,12 @@ class SynchPage extends React.Component {
                                             </div>
                                             <div className="step">
                                                 <div className="step-icon-wrap">
+                                                    <div className="step-icon"><i className="fa fa-cogs"></i></div>
+                                                </div>
+                                                <h4 className="step-title">Configuration</h4>
+                                            </div>
+                                            <div className="step">
+                                                <div className="step-icon-wrap">
                                                     <div className="step-icon"><i className="fa fa-check"></i></div>
                                                 </div>
                                                 <h4 className="step-title">Finish</h4>
@@ -107,9 +113,9 @@ class SynchPage extends React.Component {
                         <div className="container synch-group">
 
                             <div className="grid">
-                                <div className={classNames("grid-item synch-box", {"grid-item synch-box remove-synch":this.state.redText})}>
+                                <div className={classNames("grid-item synch-box", {"grid-item synch-box synch-disabled":this.state.redText})}>
                                     <div className="synch-item">
-                                        <a href="#" className="synch-link" onClick={this.addClass}>
+                                        <a href="#" className="synch-link">
                                             <img src="../public/images/Mojo.JPG"/>
                                         </a>
                                     </div>
@@ -131,7 +137,7 @@ class SynchPage extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="grid-item synch-box">
+                                <div className={classNames("grid-item synch-box", {"grid-item synch-box synch-disabled":this.state.redText})}>
                                     <div className="synch-item">
                                         <a href="#" className="synch-link">
                                             <img src="../public/images/ProQuest.JPG"/>
@@ -155,13 +161,86 @@ class SynchPage extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="grid-item synch-box">
+                                <div className={classNames("grid-item synch-box", {"grid-item synch-box remove-synch":this.state.redText})}>
                                     <div className="synch-item">
-                                        <a href="#" className="synch-link">
+                                        <a href="#" className="synch-link" onClick={this.addClass}>
                                             <img src="../public/images/VoicePad.JPG"/>
                                         </a>
                                     </div>
                                 </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/BlueRoof360.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/BoomTown.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/Brivity.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/CINC.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/Contactually.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/dotloop.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/HomeSpotter.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/LoneWolf.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="grid-item synch-box">
+                                    <div className="synch-item">
+                                        <a href="#" className="synch-link">
+                                            <img src="../public/images/SkySLope.JPG"/>
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

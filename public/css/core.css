@@ -8638,13 +8638,21 @@ body.md-skin {
     /*left: 292px;*/
     top: 0px;
     /*width: calc((100% / 3) - 20px);*/
-    margin-bottom: 30px;
+    margin: 10px 10px 10px 10px;
+}
+
+.synch-disabled {
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .synch-item {
+  width: 150px;
+  height: 80px;
   display: block;
   position: relative;
-  width: 100%;
+  /*width: 100%;*/
   padding: 18px;
   border: 1px solid #e1e7ec;
   border-radius: 7px;
@@ -8653,13 +8661,18 @@ body.md-skin {
 
 .synch-link {
     display: block;
-    width: 100%;
+    width: 100px;
+    height: 100%;
     margin-bottom: 10px;
 }
 
 .synch-item .synch-link>img {
     display: block; 
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .synch-name {
